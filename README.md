@@ -1,2 +1,2 @@
 # js-learning
-a simple rock paper scissors game only in javascript and still trying to complete it
+a simple rock paper scissors game only jscript in the script tag 
