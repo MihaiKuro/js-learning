@@ -66,23 +66,19 @@
   }
     let playerScore = 0;
     let computerScore = 0;
-  updateScore = () => {
 
-    if(determineWinner === 'You win!'){
-      playerScore += 1;
-    } else if(determineWinner === 'Computer wins!'){
-      computerScore += 1;
-    }
-  }
-
- 
   const playGame = () => {
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
     console.log('You threw: ' + playerSelection);
     console.log('The computer threw:' + computerSelection);
     console.log(determineWinner(playerSelection, computerSelection));
-    updateScore();
+    const winner = determineWinner(playerSelection, computerSelection);
+    if(winner === 'You win!'){
+      playerScore += 1;
+    } else if(winner === 'Computer wins!'){
+      computerScore += 1;
+    }
     console.log('Player score: ' + playerScore);
     console.log('Computer score: ' + computerScore);
 
@@ -90,7 +86,7 @@
 
   }
   function game() {
-    for (let i = 0; i < 5; i++) {
+    while(playerScore < 3 && computerScore < 3) {
       playGame();
     }
     if(playerScore > computerScore){
