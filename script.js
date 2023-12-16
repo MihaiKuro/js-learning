@@ -148,8 +148,8 @@ const resetGame = () => {
     scoreMessage.textContent = '';
     const playerSign = document.querySelector('#player-sign')
     const computerSign = document.querySelector('#computer-sign')
-    playerSign.textContent = ''
-    computerSign.textContent = ''
+    playerSign.textContent = '❔'
+    computerSign.textContent = '❔'
   }
 
 
