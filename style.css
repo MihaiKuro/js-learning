@@ -21,7 +21,6 @@ body {
 }
 
 .scoreboard {
-    flex-shrink: 1;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -40,7 +39,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    
     justify-content: center;
     align-items: center;
 }
@@ -55,7 +53,7 @@ body {
     width: 30vh;
     height: 25vh;
     border-radius: 40px;
-    margin-left: 50px;
+    margin-left: 20px;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
@@ -68,6 +66,7 @@ body {
 
 .scores-container h3{
     font-size:50px;
+    text-align: center;
    
 }
 .game-buttons{
@@ -107,6 +106,17 @@ body {
     padding: 20px;
     
 }
+@media only screen and (max-width: 700px) {
+    /* Adjust styles for screens smaller than 600px (e.g., phones) */
+    .header {
+      padding: 10px; /* Decrease padding for header */
+    }
+
+    /* Other adjustments as needed */
+  }
+    .scoreboard-info{
+        font-size: 1.5em;
+    }
 
 ```
 ```
