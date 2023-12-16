@@ -1,87 +1,108 @@
-
-* {
+.html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
 }
-html {
-        /* footer support */
-        position: relative;
-        min-height: 100%;
-
-      }
-
-.header{
-    background-color: #000000;
-    color: #cc1d1d;
-    padding: 40px;
+.header {
+    background-color: rgb(0, 19, 51);
+    color: white;
     text-align: center;
+    padding: 20px;
 }
-.header h1{
+.header h1 {
     font-size: 40px;
-    font-weight: 900;
-    
+
 }
 .main{
-    background-color: #292828;
-    color: #cc1d1d;    
-    text-align: center;
-    height: 70vh;
+    background-color: rgb(193, 193, 241);;
+}
+
+.scoreboard {
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;  
+    flex-direction: column; 
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
 
 }
 .scoreboard-info{
-    font-size: 40px;
-    color: #fff;
-    padding: 20px;
+    margin-top: 20px;
+    height: 30vh;
+    font-size: 3em;  
     display: flex;
     flex-direction: column;
-    text-align: center;  
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.score-info{ 
-    color: #ff1e00;
-    padding: 20px;
-    font:20px ;
-     
+.scores-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
-.score-message{
-    color: #ff1e00;
-    padding: 20px;
-    font-size: 20px;
+.sign-choice{
+    width: 30vh;
+    height: 25vh;
+    border-radius: 40px;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    font-size: 8em;
+    
 }
 
-.scores-container{
-    color: #2d0101;
-    padding: 15px;
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
+.scores-container h3{
+    font-size:50px;
+   
 }
 .game-buttons{
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
-
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    
 }
 .btn-square{
-    padding: 50px 70px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+    width: 15vh;
+    height: 15vh;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #950d0d;
+}
+.sign{
+    font-size: 2em;
+     
+}
+.sign:hover{
     cursor: pointer;
+}
+.sign:active{
+    transform: scale(0.9);
+}
+.footer{
+    background-color: rgb(0, 19, 51);
+    color: white;
+    text-align: center;
+    padding: 20px;
     
 }
 
-.sign{
-    font-size: 70px;
-}
-.footer {
-    background-color: #101911;
-    color: #cc1d1d;
-    padding: 20px;
-    text-align: center;
-    
-  }
+```
+```
+   

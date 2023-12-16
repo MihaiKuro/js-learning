@@ -5,7 +5,7 @@
     <meta name="description" content="Rock paper scissors game">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
-    <link rel='stylesheet' href="/style.css">
+    <link rel='stylesheet' href="style.css">
   </head>
 
   <body>
@@ -24,13 +24,13 @@
               <div class="scores-container"> 
 
                 <div class="scoreboard-score__player">
-                  <div class="sign" id="player-sign">❔</div>
-                  <h3>Player:<span id="player-score">0</span></h3>
+                  <div class="sign-choice" id="player-sign">❔</div>
+                  <h3><span id="player-score">0</span></h3>
                 </div>
 
                 <div class="scoreboard-score__computer">  
-                  <div class="'sign" id="computer-sign">❔</div>
-                  <h3>Computer:<span id="computer-score">0</span></h3>                  
+                  <div class="sign-choice" id="computer-sign">❔</div>
+                  <h3><span id="computer-score">0</span></h3>                  
                 </div> 
 
               </div>
@@ -49,6 +49,13 @@
     </main>
     <footer class="footer">
       <p>Created by this retard </p>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        mishu
+      </p>
     </footer>
      
 <script src="/script.js"></script>
