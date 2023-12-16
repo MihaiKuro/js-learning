@@ -133,6 +133,9 @@ body {
     .scoreboard-info{
         font-size: 1.5em;
     }
+    #reset{
+        font-size: 1em;
+    }
 }
 ```
 ```
