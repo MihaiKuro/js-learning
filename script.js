@@ -4,9 +4,6 @@
    
     const playRound = (playerSelection) => {
         const computerSelection = computerChoice();
-        console.log('You threw: ' + playerSelection);
-        console.log('The computer threw:' + computerSelection);
-        console.log(determineWinner(playerSelection, computerSelection));
         const winner = determineWinner(playerSelection, computerSelection);
         if(winner === 'You win!'){
           playerScore += 1;
@@ -14,7 +11,10 @@
           computerScore += 1;
         }
         updateScores(winner);
+        updateScoreMessage(winner, playerSelection, computerSelection);
         updateChoices(playerSelection, computerSelection);
+        
+
       }
        
 computerChoice = () => {
@@ -68,18 +68,20 @@ computerChoice = () => {
   
 //uUI
 //selecting DOM Elements
-const scoreInfo = document.querySelector('.scoreboard-info');
-const scoreMessage = document.querySelector('.scoreboard-message');
+const scoreInfo = document.querySelector('.score-info');
+const scoreMessage = document.querySelector('.score-message');
 const playerScorePara = document.querySelector('#player-score'); 
 const computerScorePara = document.querySelector('#computer-score');
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
+const resetButton = document.querySelector('#reset');
 
 //Event Listeners 
 rockButton.addEventListener('click', () => handleClick('rock'));
 paperButton.addEventListener('click', () => handleClick('paper'));
 scissorsButton.addEventListener('click', () => handleClick('scissors'));
+resetButton.addEventListener('click', () => resetGame());
 
 const handleClick = (choice) => {
     playRound(choice);
@@ -99,12 +101,13 @@ const updateScores = (winner) => {
 
 const updateScoreMessage = (winner, playerSelection, computerSelection) => {
     if(winner === 'You win!'){
-        scoreMessage.textContent = `${playerSelection} beats ${computerSelection}. You win!`;
+        scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} beats ${computerSelection}. You win!`;
     } else if(winner === 'Computer wins!'){
-        scoreMessage.textContent = `${computerSelection} beats ${playerSelection}. Computer wins!`;
+        scoreMessage.textContent = `${capitalizeFirstLetter(computerSelection)} beats ${playerSelection}. Computer wins!`;
     } else {
-        scoreMessage.textContent = `${playerSelection} ties ${computerSelection}. It's a tie!`;
+        scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} ties ${computerSelection}. It's a tie!`;
     }
+
     }
 
 
@@ -135,6 +138,26 @@ function updateChoices(playerSelection, computerSelection) {
       break
   }
 }
+
+const resetGame = () => {
+    playerScore = 0;
+    computerScore = 0;
+    playerScorePara.textContent = `Player: ${playerScore}`;
+    computerScorePara.textContent = `Computer: ${computerScore}`;
+    scoreInfo.textContent = 'You decide when to stop!';
+    scoreMessage.textContent = '';
+    const playerSign = document.querySelector('#player-sign')
+    const computerSign = document.querySelector('#computer-sign')
+    playerSign.textContent = ''
+    computerSign.textContent = ''
+  }
+
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+}
+
+
 
 
 
